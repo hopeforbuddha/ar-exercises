@@ -30,7 +30,9 @@ class Store
   store.mens_apparel = true
   store.womens_apparel = true
   store.save
-
+  puts "mens apparel ----"
   puts store = Store.where(mens_apparel: true)
+  puts "womens apparel ----"
+  puts store = Store.where(["womens_apparel = ? and annual_revenue < ?", true, 1000000])
 
 end
